@@ -1,6 +1,6 @@
 # About
 
-It's web application which allowe to manage users MySQL database.
+UserCRUD - web application which allowe to manage users MySQL database.
 
 
 ## Functionality
