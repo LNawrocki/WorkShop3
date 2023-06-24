@@ -50,6 +50,7 @@ public class Edit extends HttpServlet {
         UserDao userDao = new UserDao();
         userDao.update(user);
 
-        resp.sendRedirect("/user/list");
+ //       System.out.println(req.getContextPath() + "/user/list");
+        resp.sendRedirect(req.getContextPath() + "/user/list");
     }
 }

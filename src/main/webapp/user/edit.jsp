@@ -5,6 +5,9 @@
     <title>Edytuj użytkownika</title>
 </head>
 <body>
+
+<a href="/user/list">Lista użytkowników</a> <br>
+
 <form action="" method="POST">
     Edycja użytkownika <br>
     <br>

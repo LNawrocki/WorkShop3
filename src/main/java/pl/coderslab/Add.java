@@ -19,7 +19,8 @@ public class Add extends HttpServlet {
         resp.setContentType("text/html;charset=utf8");
         req.setCharacterEncoding(StandardCharsets.UTF_8.name());
 
-        resp.sendRedirect("/user/add.jsp");
+        getServletContext().getRequestDispatcher("/user/add.jsp")
+                .forward(req, resp);
     }
 
     @Override
@@ -32,15 +33,15 @@ public class Add extends HttpServlet {
         String userEmail = req.getParameter("email");
         String userPassword = req.getParameter("password");
 
-        UserDao userDao = new UserDao();
-
         User user = new User();
         user.setUserName(userName);
         user.setEmail(userEmail);
         user.setPassword(userPassword);
+
+        UserDao userDao = new UserDao();
         userDao.create(user);
 
-        resp.sendRedirect("/user/list");
+        resp.sendRedirect(req.getContextPath() + "/user/list");
 
     }
 }

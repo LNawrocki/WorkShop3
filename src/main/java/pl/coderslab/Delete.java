@@ -21,11 +21,4 @@ public class Delete extends HttpServlet {
 
         resp.sendRedirect("/user/list");
     }
-
-    @Override
-    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-
-
-
-    }
 }

@@ -13,11 +13,11 @@
 
     <c:forEach var="user" items="${users}">
     <TR>
-        <td>${user.getId()}</td> <td>${user.getUserName()}</td><td>${user.getEmail()}</td>
+        <td>${user.id}</td> <td>${user.userName}</td><td>${user.email}</td>
         <td>
-            <a href="/user/delete?userID=${user.getId()}">usuń</a>
-            <a href="/user/edit?userID=${user.getId()}">edytuj</a>
-            <a href="">pokaż</a>
+            <a href="/user/delete?userID=${user.id}">Usuń</a>
+            <a href="/user/edit?userID=${user.id}">Edytuj</a>
+            <a href="/user/show?userID=${user.id}">Pokaż</a>
         </td>
     </TR>
     </c:forEach>
